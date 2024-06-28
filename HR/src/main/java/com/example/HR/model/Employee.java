@@ -12,9 +12,10 @@ public class Employee {
     @Id // Bu anotasyon, 'id' alanının birincil anahtar olduğunu belirtir.
     @GeneratedValue(strategy = GenerationType.IDENTITY) // Bu, 'id' alanının otomatik olarak artırılacağını belirtir.
     private Long Id; // Çalışanın benzersiz kimliği
-
-    private String name; // Çalışanın adı
-    private String position; // Çalışanın pozisyonu
+    private String firstName; // Çalışanın adı
+    private String lastName;
+    private String iban;
+    private String jobTitle; // Çalışanın pozisyonu
 
     //Getter ve Setter metotları
     //Getter, özel alanların değerini okumak için kullanılır.
@@ -28,19 +29,33 @@ public class Employee {
         Id = id;
     }
 
-    public String getName() {
-        return name;
+
+    public String getFirstName(){
+        return firstName;
+    }
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+    public String getLastName(){
+        return lastName;
+    }
+    public void setLastName(String lastName){
+        this.lastName=lastName;
+    }
+    public String getIban(){
+        return iban;
+    }
+    public void setIban(String iban){
+        this.iban=iban;
     }
 
-    public void setName(String name) {
-        this.name = name;
+
+    public String getJobTitle() {
+        return jobTitle;
     }
 
-    public String getPosition() {
-        return position;
+    public void setJobTitle(String jobTitle ) {
+        this.jobTitle = jobTitle;
     }
 
-    public void setPosition(String position) {
-        this.position = position;
-    }
 }
